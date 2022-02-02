@@ -1,16 +1,16 @@
 import { MainLayout } from "../../../layout/Main.layout";
 
 const PublicRoute = (props) => {
-    const homePage = props.home
-    const layout = props.hasLayout
+    const Page = props.page
+    const haslogin = props.haslogin
 
     return ( 
         <>
 
-        {layout ? (
-            <MainLayout>{homePage}</MainLayout>
-        ) : homePage
-        }
+        {/*{haslogin ? (*/}
+            <MainLayout haslogin={1}>{Page}</MainLayout>
+        {/*) : Page*/}
+        {/*}*/}
             
             
         </>

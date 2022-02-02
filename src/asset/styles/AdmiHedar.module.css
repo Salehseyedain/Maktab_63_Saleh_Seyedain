@@ -1,0 +1,15 @@
+.hedearContainer{
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+}
+.hedearContainer ul{
+    display: inline-block;
+    list-style: none;
+
+}
+.hedearContainer li{
+    width: 30px;
+    height: 10px;
+
+}

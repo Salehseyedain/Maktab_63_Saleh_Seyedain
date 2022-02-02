@@ -1,8 +1,13 @@
+import CustomerHedar from "./customerHedar/customerHedar";
+import AdmiHedar from "./adminHeder/admiHedar";
+
+
 const MainLayout = (props) => {
     console.log(props);
     return ( 
         <>
-            <h1>this is MainLayout</h1>
+            {props.haslogin==1?<CustomerHedar/>: <AdmiHedar/>   }
+
             <div>
                 <h1>
                     {props.children}

@@ -1,0 +1,20 @@
+.hedearContainer{
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+}
+
+.leftHedear{
+
+}
+.rightHedear{
+    display: flex;
+    flex-direction: row;
+}
+
+.rightHedear h1{
+    margin: 0;
+}
+.rightHedear span{
+
+}
