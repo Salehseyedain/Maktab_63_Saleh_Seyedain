@@ -1,9 +1,9 @@
 import  './Home.css'
-
+import {Typography} from '@mui/material'
 const Home = () => {
     return ( 
         <div >
-            <h1>heeeeeyyyyyyy hooomeeee</h1>
+            <Typography variant='h1'>hey hooomeeee</Typography>
         </div>
      );
 }

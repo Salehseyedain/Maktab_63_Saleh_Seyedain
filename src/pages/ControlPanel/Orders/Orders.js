@@ -4,7 +4,7 @@ class Orders extends Component {
     render() {
         return (
             <div>
-                <h1>eeefeefefef</h1>
+                <h1>orders</h1>
             </div>
         );
     }

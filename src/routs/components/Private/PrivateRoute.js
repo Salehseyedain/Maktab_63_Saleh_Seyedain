@@ -8,7 +8,7 @@ const PrivateRoteute = (props) => {
         <>
 
 
-                <MainLayout haslogin={0}>{Page}</MainLayout>
+                <MainLayout haslogin={haslogin}>{Page}</MainLayout>
 
 
 

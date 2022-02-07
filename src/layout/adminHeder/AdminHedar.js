@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import style from '../../asset/styles/AdmiHedar.module.css';
 
-class AdmiHedar extends Component {
+class AdminHedar extends Component {
     render() {
         return (
 
@@ -21,4 +21,4 @@ class AdmiHedar extends Component {
     }
 }
 
-export default AdmiHedar;
+export default AdminHedar;

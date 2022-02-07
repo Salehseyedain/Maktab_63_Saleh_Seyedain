@@ -17,15 +17,15 @@ const AppRoute = () => {
         <BrowserRouter>
             <Routes>
                 <Route path='/' element={<PublicRoute haslogin={1} page={<Home/>}/>}/>
-                <Route path='/Shelvs' element={<PublicRoute haslogin={true} page={<Shelvs/>}/>}/>
-                <Route path='/Commoditi' element={<PublicRoute haslogin={true} page={<Commoditi/>}/>}/>
-                <Route path='/Basket' element={<PublicRoute haslogin={true} page={<Basket/>}/>}/>
-                <Route path='/Shoping' element={<PublicRoute haslogin={true} page={<Shoping/>}/>}/>
-                <Route path='/Resulte' element={<PublicRoute haslogin={true} page={<Resulte/>}/>}/>
-                <Route path='/Login' element={<PublicRoute haslogin={true} page={<Login/>}/>}/>
-                <Route path='/Commodities' element={<PrivateRoteute haslogin={true} page={<Commodities/>}/>}/>
-                <Route path='/ListOfAssets' element={<PrivateRoteute haslogin={true} page={<ListOfAssets/>}/>}/>
-                <Route path='/Orders' element={<PrivateRoteute haslogin={0} page={<Orders/>}/>}/>
+                <Route path='/shelvs' element={<PublicRoute haslogin={true} page={<Shelvs/>}/>}/>
+                <Route path='/commoditi' element={<PublicRoute haslogin={true} page={<Commoditi/>}/>}/>
+                <Route path='/basket' element={<PublicRoute haslogin={true} page={<Basket/>}/>}/>
+                <Route path='/shoping' element={<PublicRoute haslogin={true} page={<Shoping/>}/>}/>
+                <Route path='/resulte' element={<PublicRoute haslogin={true} page={<Resulte/>}/>}/>
+                <Route path='/login' element={<PublicRoute haslogin={true} page={<Login/>}/>}/>  {/* protected */}
+                <Route path='/commodities' element={<PrivateRoteute haslogin={true} page={<Commodities/>}/>}/>
+                <Route path='/listOfAssets' element={<PrivateRoteute haslogin={true} page={<ListOfAssets/>}/>}/>
+                <Route path='/orders' element={<PrivateRoteute haslogin={false} page={<Orders/>}/>}/>
             </Routes>
         </BrowserRouter>
      );

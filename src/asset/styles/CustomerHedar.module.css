@@ -1,10 +1,41 @@
-.hedearContainer{
+@font-face {
+    font-family: 'Vazir-Bold';
+    src: url(../fonts/vazir/Vazir-Bold.woff);
+}
+*{
+    font-family: Vazir-Bold;
+}
+.headerContainer{
     background-color: whitesmoke;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
 }
 
 .leftHedear{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.basket{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    /* background-color: aqua; */
+}
+.admin{
+    margin-left: 10px;
+}
+.basket p{
+    margin-top: 7px;
+    margin-right: 10px;
+}
+.headerCenter{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
 
 }
 .rightHedear{
@@ -13,8 +44,12 @@
 }
 
 .rightHedear h1{
-    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.rightHedear span{
 
+.logoPic{
+    width: 170px;
+    height: 130px;
 }
