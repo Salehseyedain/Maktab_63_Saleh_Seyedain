@@ -6,7 +6,7 @@ const MainLayout = (props) => {
     console.log(props);
     return ( 
         <>
-            {props.haslogin==1?<CustomerHedar/>: <AdminHedar/> }
+            {props.haslogin==0?<CustomerHedar/>: <AdminHedar/> }
 
             <div>
                 <h1>

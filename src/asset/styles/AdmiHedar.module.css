@@ -1,15 +1,36 @@
-.hedearContainer{
+.headerContainer{
     background-color: whitesmoke;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
 }
-.hedearContainer ul{
-    display: inline-block;
-    list-style: none;
-
+.leftHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.hedearContainer li{
-    width: 30px;
-    height: 10px;
 
+
+.headerCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ 
+ }
+
+ .rightHedear{
+    display: flex;
+    flex-direction: row;
+}
+
+.rightHedear h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoPic{
+    width: 170px;
+    height: 130px;
 }
