@@ -1,22 +1,25 @@
 @font-face {
     font-family: 'Vazir-Bold';
     src: url(../fonts/vazir/Vazir-Bold.woff);
+
 }
 *{
     font-family: Vazir-Bold;
 }
 .headerContainer{
-    background-color: whitesmoke;
+    background-color: #cccaca;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 10px;
+    padding: 0 10px;
+    color: #e0d9d3;
 }
 
 .leftHedear{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 2rem;
 }
 .basket{
     display: flex;
@@ -47,9 +50,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #546a2f;
 }
 
 .logoPic{
-    width: 170px;
-    height: 130px;
+    width: 120px;
+    height: 90px;
 }

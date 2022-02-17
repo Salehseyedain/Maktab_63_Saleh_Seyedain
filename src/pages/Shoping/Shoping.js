@@ -10,4 +10,4 @@ class Shoping extends Component {
     }
 }
 
-export default Shoping;
+export {Shoping};

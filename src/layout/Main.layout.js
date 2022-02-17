@@ -1,18 +1,15 @@
-import CustomerHedar from "./customerHedar/CustomerHedar";
-import AdminHedar from "./adminHeder/AdminHedar";
+import CustomerHedar from "./customerHedar/customerHedar";
+import AdmiHedar from "./adminHeder/admiHedar";
 
 
 const MainLayout = (props) => {
     console.log(props);
     return ( 
         <>
-            {props.haslogin==0?<CustomerHedar/>: <AdminHedar/> }
+            {props.haslogin==1?<CustomerHedar/>: <AdmiHedar/>   }
 
-            <div>
-                <h1>
                     {props.children}
-                </h1>
-            </div>
+
         </>
      );
 }

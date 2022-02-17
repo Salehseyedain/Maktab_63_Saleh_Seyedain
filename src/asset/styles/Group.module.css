@@ -1,0 +1,14 @@
+.contain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.roww{
+    display: flex;
+    flex-direction: row;
+    
+}
+.margin{
+    margin: 10 110px;
+}

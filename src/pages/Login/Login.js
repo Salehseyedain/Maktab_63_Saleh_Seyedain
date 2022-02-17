@@ -1,18 +1,12 @@
-// import React, {Component} from 'react';
-
-// class Login extends Component {
-//     render() {
-//         return (
-//             <div>
-
-//             </div>
-//         );
-//     }
-// }
-
-// export default Login;
-
 import * as React from 'react';
+
+
+import {PATHS} from '../../configs/routes.config';
+import {useRef} from 'react';
+import {Helmet} from 'react-helmet';
+
+import {useNavigate} from 'react-router-dom';
+import * as api from '../../api/user.api';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -26,101 +20,137 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import logo from '../../asset/images/trobche.png';
+import style from '../../asset/styles/Login.page.module.css'
+import {useFormik} from "formik";
+import * as yup from 'yup';
+import {tableCellClasses} from "@mui/material/TableCell";
 
-function Copyright(props) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Trobcheh store
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
 
-const theme = createTheme();
 
-export default function Login() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    // eslint-disable-next-line no-console
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
+
+
+const validationSchema = yup.object({
+    username: yup
+        .string('نام کاربری را وارد کنید')
+
+        .min(4, 'نام کاربری باید بیشتر از 4 کارکتر باشد')
+        .required('نام کاربری اجباری میباشد'),
+    password: yup
+        .string('رمزعبور را وارد کنید')
+        .min(4, 'رمزعبور باید بیشتر از 4 کارکتر باشد')
+        .required('رمزعبور اجباری میباشد'),
+});
+
+const Login=() =>  {
+    const formRef = useRef();
+    const navigate = useNavigate();
+
+    const handleSubmit = async (e) => {
+        try {
+            const response = await api.login(e);
+            navigate(PATHS.COMMODITIES);
+            // console.log("hi")
+
+        } catch (e) {
+                    alert("اکانت وجود ندارد")
+
+        }
+    };
+    const formik = useFormik({
+        initialValues: {
+            username: '',
+            password: '',
+        },
+        validationSchema: validationSchema,
+        onSubmit: (e) => {
+            handleSubmit(e)
+        },
     });
-  };
 
-  return (
-    <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
-        <CssBaseline />
-        <Box
-          sx={{
-            marginTop: 8,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}
-        >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            <LockOutlinedIcon />
-          </Avatar>
-          <Typography component="h1" variant="h5">
-            Sign in
-          </Typography>
-          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
-              autoFocus
-            />
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-            />
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
-              Sign In
-            </Button>
-            <Grid container>
-              <Grid item xs>
-                <Link href="#" variant="body2">
-                  Forgot password?
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link href="#" variant="body2">
-                  {"Don't have an account? Sign Up"}
-                </Link>
-              </Grid>
-            </Grid>
-          </Box>
-        </Box>
-        <Copyright sx={{ mt: 8, mb: 4 }} />
-      </Container>
-    </ThemeProvider>
-  );
+
+    return (
+        <div className={style.login}>
+            <Container component="main" maxWidth="xs"  className={style.container} dir="rtl" align="right"  >
+                <CssBaseline />
+                <Box
+                    sx={{
+                        marginTop: 8,
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                    }}
+                >
+                    <img src={logo} className={style.logoPic} />
+                    <Typography component="h1" variant="h5" >
+                        ورود به پنل مدیریت
+                    </Typography>
+                    <Box component="form" onSubmit={formik.handleSubmit} noValidate sx={{ mt: 1 }}>
+                        <TextField
+                            dir="rtl"
+                            align="right"
+                            margin="normal"
+                            required
+                            fullWidth
+                            id="username"
+                            label="نام کاربری"
+                            autoComplete="username"
+                            name="username"
+                            autoFocus
+                            value={formik.values.username}
+                            onChange={formik.handleChange}
+                            error={formik.touched.username && Boolean(formik.errors.username)}
+
+                            helperText={formik.touched.username && formik.errors.username}
+                        />
+                        <TextField
+                            margin="normal"
+                            required
+                            fullWidth
+                            name="password"
+                            label="رمز عبور"
+                            type="password"
+                            id="password"
+                            autoComplete="current-password"
+                            value={formik.values.password}
+                            onChange={formik.handleChange}
+                            error={formik.touched.password && Boolean(formik.errors.password)}
+                            helperText={formik.touched.password && formik.errors.password}
+                        />
+
+                        <Button
+                            type="submit"
+                            fullWidth
+                            variant="contained"
+                            sx={{ mt: 3, mb: 2 }}
+                        >
+                            ورود
+                        </Button>
+                    </Box>
+                    <Link top={PATHS.HOME}>بازگشت</Link>
+                </Box>
+
+            </Container>
+        </div>
+    );
 }
+
+
+export {Login};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -1,9 +1,10 @@
 import  './Home.css'
-import {Typography} from '@mui/material'
+import Group from './components/Group/Group';
 const Home = () => {
     return ( 
         <div >
-            <Typography variant='h1'>hey hooomeeee</Typography>
+            <Group hOne={'لبنیات'}/>
+            <Group hOne={'شوینده'}/>
         </div>
      );
 }

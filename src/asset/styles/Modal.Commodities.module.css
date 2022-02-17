@@ -1,0 +1,33 @@
+.modalContaner{
+    /*background-color: #c5c4c4;*/
+    direction: rtl;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    height: auto;
+
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0;
+}
+.header h5{
+    margin-top: 0;
+}
+.main{
+    height: auto;
+}
+.uploadInpu{
+    color: #9600F0;
+    direction: ltr;
+}
+
+.closeHover:hover{
+    cursor: pointer;
+}
+.addHover:hover{
+    cursor: pointer;
+}

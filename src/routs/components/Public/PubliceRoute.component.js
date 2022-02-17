@@ -8,7 +8,7 @@ const PublicRoute = (props) => {
         <>
 
         {/*{haslogin ? (*/}
-            <MainLayout haslogin={haslogin}>{Page}</MainLayout>
+            <MainLayout haslogin={1}>{Page}</MainLayout>
         {/*) : Page*/}
         {/*}*/}
             

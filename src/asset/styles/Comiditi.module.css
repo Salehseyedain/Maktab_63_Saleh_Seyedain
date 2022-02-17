@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+}
+.c1{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.photoSize{
+    width: 220px;
+    height: 220px;
+}

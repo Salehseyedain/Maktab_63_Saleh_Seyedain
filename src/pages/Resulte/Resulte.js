@@ -10,4 +10,4 @@ class Resulte extends Component {
     }
 }
 
-export default Resulte;
+export {Resulte};
