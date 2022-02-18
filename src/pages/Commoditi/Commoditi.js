@@ -15,26 +15,25 @@ function Commoditi() {
         return (
             <div className={style.container}>
                 <div className={style.c1}>
-                    
-                    <div>
+                    <div className={style.lBox}>
                         <h2>کالای فلان</h2>
                         <p> تومان ۲۰،۰۰۰،۰۰۰</p>
-                        <div>
-                        <button>افزودن به سبد خرید<AddIcon/></button>
-                        <FormControl dir="ltr">
-                            <InputLabel id="demo-simple-select-label">۱</InputLabel>
-                            <Select labelId="demo-simple-select-label" id="demo-simple-select" value={age} label="Age" onChange={handleChange}>
-                                <MenuItem value={1}>۱</MenuItem>
-                                <MenuItem value={2}>۲</MenuItem>
-                                <MenuItem value={3}>۳</MenuItem>
-                                <MenuItem value={4}>۴</MenuItem>
-                                <MenuItem value={5}>۵</MenuItem>
-                                <MenuItem value={6}>۶</MenuItem>
-                                <MenuItem value={7}>۷</MenuItem>
-                                <MenuItem value={8}>۸</MenuItem>
-                                <MenuItem value={9}>۹</MenuItem>
-                            </Select>
-                        </FormControl>
+                        <div className={style.ldBox}>
+                            <button className={style.btn}><AddIcon/>افزودن به سبد خرید</button>
+                            <FormControl dir="ltr">
+                                <InputLabel id="demo-simple-select-label">۱</InputLabel>
+                                <Select labelId="demo-simple-select-label" id="demo-simple-select" value={age} label="Age" onChange={handleChange}>
+                                    <MenuItem value={1}>۱</MenuItem>
+                                    <MenuItem value={2}>۲</MenuItem>
+                                    <MenuItem value={3}>۳</MenuItem>
+                                    <MenuItem value={4}>۴</MenuItem>
+                                    <MenuItem value={5}>۵</MenuItem>
+                                    <MenuItem value={6}>۶</MenuItem>
+                                    <MenuItem value={7}>۷</MenuItem>
+                                    <MenuItem value={8}>۸</MenuItem>
+                                    <MenuItem value={9}>۹</MenuItem>
+                                </Select>
+                            </FormControl>
                         </div>
                     </div>
                     <div>
