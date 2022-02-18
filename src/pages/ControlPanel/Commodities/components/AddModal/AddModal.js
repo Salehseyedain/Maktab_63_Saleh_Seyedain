@@ -43,11 +43,56 @@ export default function AddModal() {
     const handleClose = () => setOpen(false);
     const formRef = useRef();
     const navigate = useNavigate();
-    const addHandelear = (e) => {
-      e.preventDefault()
+    const addHandelear = async (e) => {
+        e.preventDefault()
+        let imgeFile = new FormData();
+        console.log(e.target.image);
+        imgeFile.append("image", e.target.image.files[0])
+        const date = new Date(0)
+        alert("عكس اپلود شد")
+        let image=""
+        try {
+            const response = await api.post("/upload", imgeFile);
+            image = response.filename;
+                    // console.log("mooodal",image)
+                    
+        } catch (e) {
+            alert("عكس اپلود نشد")
+             image ="5b231eda24525225722b92103daeae00"
+        }
         const form = new FormData(e.target);
         const data = Object.fromEntries(form);
-        console.log("mooodal",form)
+
+
+        let commoditi={
+            "brand": "microsoft",
+            "image": [
+                image
+            ],
+            "thumbnail": image,
+            "price": "0",
+            "count": "0",
+            "createdAt": date,
+
+            "category": {
+                "group": data.group,
+                "name": data.name,
+                "icon": image
+            }
+    }
+
+    try {
+        const response = await api.post("/products",commoditi);
+        alert('salaam');
+    } catch (e) {
+        alert("كالا ثبت نشد")
+
+
+    }
+
+
+    handleClose()
+
     }
     const handleSubmit = async (e) => {
         try {
@@ -84,7 +129,7 @@ export default function AddModal() {
                              <ImageUpload/>
                               <div style={{ display: "flex",flexDirection:"column",margin:"0.5rem 0" }}>
                                   <label htmlFor={"commoditiName"}>نام كالا:</label>
-                                  <input id={"commoditiName"}  />
+                                  <input id={"commoditiName"} name={"name"} />
                               </div>
                               <SelectAutoWidth/>
                               <MinHeightTextarea/>

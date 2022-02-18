@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'Vazir-Bold';
+    src: url(../fonts/vazir/Vazir-Bold.woff);
+
+}
+*{
+    font-family: Vazir-Bold;
+}
+.headerContainer{
+    background-color: #060638;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10px;
+    color: #e0d9d3;
+}
+
+.leftHedear{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+}
+.basket{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    /* background-color: aqua; */
+}
+.admin{
+    margin-left: 10px;
+}
+.basket p{
+    margin-top: 7px;
+    margin-right: 10px;
+}
+.headerCenter{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+
+}
+.rightHedear{
+    display: flex;
+    flex-direction: row;
+}
+
+.rightHedear h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoPic{
+    width: 120px;
+    height: 90px;
+}

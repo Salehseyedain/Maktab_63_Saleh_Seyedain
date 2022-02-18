@@ -12,6 +12,8 @@ import styles from '../../../../../asset/styles/Modal.Commodities.module.css';
 import ImageUpload from "../ImageUpload/ImageUpload";
 import SelectAutoWidth from "../Selctor/Selctor";
 import MinHeightTextarea from "../Textarea/TextArea";
+import CloseIcon from '@mui/icons-material/Close';
+import EditIcon from '@mui/icons-material/Edit';
 
 
 const style = {
@@ -61,7 +63,7 @@ export default function EditModal(props) {
                 <Fade in={openedit}>
                     <Box sx={style}>
                         <div className={styles.modalContaner}>
-                            <div className={styles.header}><h5>ويرايش</h5><span>icon</span></div>
+                            <div className={styles.header}><EditIcon/><CloseIcon onClick={handleClose} className={styles.closeHover}/></div>
                             <form className={styles.main} onSubmit={addHandelear}>
                                 <ImageUpload value={props.data.category.photo}/>
                                 <div style={{ display: "flex",flexDirection:"column",margin:"0.5rem 0" }}>

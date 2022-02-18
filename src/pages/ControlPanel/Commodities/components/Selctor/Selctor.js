@@ -17,6 +17,7 @@ export default function SelectAutoWidth(props) {
             <FormControl sx={{ m: 0, width:"100%",backgroundColor:"white", padding:"0 0",margin:"0.4rem 0"}} id={"selector"}>
 
                 <Select
+                    name={"group"}
                     sx={{height:"2rem",width:"100%"}}
                     value={age}
                     onChange={handleChange}

@@ -30,6 +30,7 @@ const ImageUpload = (props) => {
     return (
         <div>
             <input
+                 name={"image"}
                 style={{ display: "none" }}
                 // accept=".zip,.rar"
                 ref={inputFile}
