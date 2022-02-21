@@ -18,8 +18,9 @@ export default class Group extends Component {
         let num=0;
         return (
             <div className={style.contain}>
-                    <Link to={PATHS.SHELVS} className={style.hed} >
-                    <h1>{`كالا هاي گروه ${this.props.hOne}`}</h1><MdArrowDropDownCircle size={30} color={"blue"} style={{marginTop:"2rem"}}/>
+                <Link to={PATHS.SHELVS} className={style.hed} >
+                    <h1>{`كالا هاي گروه ${this.props.hOne}`}</h1>
+                    <MdArrowDropDownCircle size={30} color={"blue"} style={{marginTop:"2rem"}}/>
                 </Link>
                 <div className={style.roww}>
 
@@ -32,21 +33,9 @@ export default class Group extends Component {
                             return <Card data={item}/>
 
                         }
-                        // console.log('salaaaam');
+                    
                     })}
                 </div>
-                    
-
-                {/*<div className={style.roww}>*/}
-                {/*    */}
-                {/*    <Card/>*/}
-                {/*    <Card/>*/}
-                {/*</div>*/}
-                {/*<div className={style.roww}>*/}
-                {/*    <Card/>*/}
-                {/*    <Card/>*/}
-                {/*    <Card/>*/}
-                {/*</div>*/}
             </div>
         )
     }

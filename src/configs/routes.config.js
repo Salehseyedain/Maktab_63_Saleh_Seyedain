@@ -9,4 +9,5 @@ export const PATHS = {
   RESULTE: '/Resulte',
   SHELVS: '/Shelvs',
   SHOPING: '/Shoping',
+  Resulte:'/Resulte'
 }

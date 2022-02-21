@@ -30,7 +30,7 @@ const drawerWidth = 240;
 
 export default function Sidebar() {
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box dir="rtl" sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar
         position="fixed"

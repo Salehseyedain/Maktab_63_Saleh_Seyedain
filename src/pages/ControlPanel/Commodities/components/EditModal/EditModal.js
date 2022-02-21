@@ -58,7 +58,6 @@ export default function EditModal(props) {
                 BackdropProps={{
                     timeout: 500,
                 }}
-
             >
                 <Fade in={openedit}>
                     <Box sx={style}>

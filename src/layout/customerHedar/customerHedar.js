@@ -61,7 +61,7 @@ class CustomerHedar extends Component {
                     </div>
                     {/* <span> <RiShoppingCart2Line size={50}/></span> */}
                     <div className={style.admin}>
-                        <Link to={PATHS.LOGIN}>     <SupervisorAccountIcon sx={{ fontSize: 44,color: "#556b2f" }} /></Link>
+                        <Link to={PATHS.LOGIN}> <SupervisorAccountIcon sx={{ fontSize: 44,color: "#556b2f" }} /></Link>
 
                     </div>
                     {/* <span><GrUserManager/></span> */}
