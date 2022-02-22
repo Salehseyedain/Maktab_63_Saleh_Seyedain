@@ -9,6 +9,7 @@ export {Commoditi} from './Commoditi/Commoditi'
 export {Commodities} from './ControlPanel/Commodities/Commodities'
 export {ListOfAssets} from './ControlPanel/ListOfAssets/ListOfAssets'
 export {Orders} from './ControlPanel/Orders/Orders'
+export {Nahayi} from './Nahayi/Nahayi'
 
 
 

@@ -20,6 +20,7 @@ const AppRoute = () => {
                 <Route path={PATHS.LISTOFASSETS} element={<PrivateRoteute haslogin={0} page={<Page.ListOfAssets/>}/>}/>
                 <Route path={PATHS.ORDERS} element={<PrivateRoteute haslogin={0} page={<Page.Orders/>}/>}/>
                 <Route path={PATHS.Resulte} element={<PrivateRoteute haslogin={0} page={<Page.Resulte/>}/>}/>
+                <Route path={PATHS.Nahayi} element={<PublicRoute haslogin={1} page={<Page.Nahayi/>}/>}/>
             </Routes>
         </BrowserRouter>
      );
