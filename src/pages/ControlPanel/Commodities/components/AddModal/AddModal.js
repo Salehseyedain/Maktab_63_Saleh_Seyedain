@@ -77,7 +77,8 @@ export default function AddModal() {
             "category": {
                 "group": data.group,
                 "name": data.name,
-                "icon": image
+                "icon": image,
+                "detail":data.detail
             }
     }
 

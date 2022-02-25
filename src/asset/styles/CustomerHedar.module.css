@@ -13,6 +13,12 @@
     justify-content: space-between;
     padding: 0 10px;
     color: #e0d9d3;
+    /* position: fixed;
+    z-index: 100;
+    width: 100%; */
+}
+.headerContainer a{
+    text-decoration: none;
 }
 
 .leftHedear{
@@ -44,6 +50,7 @@
 .rightHedear{
     display: flex;
     flex-direction: row;
+
 }
 
 .rightHedear h1{
@@ -51,6 +58,7 @@
     justify-content: center;
     align-items: center;
     color: #546a2f;
+
 }
 
 .logoPic{

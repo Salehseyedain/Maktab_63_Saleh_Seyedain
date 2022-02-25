@@ -9,25 +9,22 @@ export default class Group extends Component {
         num:0,
         data:[]
     }
-    componentDidMount() {
-        console.log(this.props)
-    }
-
+    
 
     render() {
         let num=0;
         return (
             <div className={style.contain}>
-                <Link to={PATHS.SHELVS} className={style.hed} >
-                    <h1>{`كالا هاي گروه ${this.props.hOne}`}</h1>
-                    <MdArrowDropDownCircle size={30} color={"blue"} style={{marginTop:"2rem"}}/>
+                <Link to={`${PATHS.SHELVS}/?grop=${this.props.hOne[1]}`} className={style.hed} >
+                    <h1>{`كالا های گروه ${this.props.hOne[0]}`}</h1>
+                    <MdArrowDropDownCircle size={30} color={"green"} style={{marginTop:"2rem"}}/>
                 </Link>
                 <div className={style.roww}>
 
                     {
                         this.props.data.map((item ,index)=>{
 
-                        if(item.category.group==this.props.hOne && num<6){
+                        if(item.category.group==this.props.hOne[0] && num<6){
                             num+=1
                             console.log(item);
                             return <Card data={item}/>

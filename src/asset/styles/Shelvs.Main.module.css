@@ -1,14 +1,11 @@
-*{
-
-    text-decoration: none;
-}
 .contain{
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     direction: rtl;
-    /* margin-top: 30px; */
+
 }
 .hed{
     width: 90%;
@@ -32,6 +29,4 @@
 .margin{
     margin: 10 110px;
 }
-.hed h1{
-    color: rgb(42, 148, 32);
-}
+

@@ -8,6 +8,7 @@ export default function MinHeightTextarea(props) {
             <label htmlFor={"textArea"}>توضيحات:</label>
             <TextareaAutosize
                 id={"textArea"}
+                name={'detail'}
                 aria-label="minimum height"
                 minRows={3}
 

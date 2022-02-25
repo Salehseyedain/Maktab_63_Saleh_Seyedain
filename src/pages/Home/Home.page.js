@@ -28,7 +28,7 @@ class Home extends Component {
             <div>
                 {/*<HomeTable prop={this.state}/>*/}
                 {  this.state.data .map(item=>{
-                    return <Group hOne={item.name} data={this.state.commoditis}/>
+                    return <Group hOne={[item.name,item.id]} data={this.state.commoditis}/>
                     
                 })}
 

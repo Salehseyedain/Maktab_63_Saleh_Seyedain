@@ -66,10 +66,12 @@ class CustomerHedar extends Component {
                     </div>
                     {/* <span><GrUserManager/></span> */}
                 </div>
-                <div className={style.rightHedear}>
-                    <h1>فروشگاه تربچه</h1>
-                    <img className={style.logoPic} src={logo}/>
-                </div>
+                    <Link to={PATHS.HOME}>
+                    <div className={style.rightHedear}>
+                        <h1>فروشگاه تربچه</h1>
+                        <img className={style.logoPic} src={logo}/>
+                     </div>
+                    </Link>
             </div>
         );
     }

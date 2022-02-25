@@ -34,3 +34,6 @@
     flex-direction: row;
     margin-right: 10px;
 }
+.detail{
+    direction: rtl;
+}
