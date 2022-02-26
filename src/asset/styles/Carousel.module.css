@@ -1,0 +1,69 @@
+.contain{
+    /* background-color: blueviolet; */
+    width: 100%;
+    height: 500px;
+}
+.fSlide{
+    background-image: url(../images/BBaner.png)  ;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 400px;
+    /* display: flex;
+    justify-content: left;
+    flex-direction: column;
+    align-items: center; */
+}   
+.sSlide{
+    background-image: url(../images/iphone13.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 400px;
+    /* display: flex;
+    justify-content: left;
+    flex-direction: column;
+    align-items: center; */
+}   
+.tSlide{
+    background-image: url(../images/baner2.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 400px;
+    /* display: flex;
+    justify-content: left;
+    flex-direction: column;
+    align-items: center; */ 
+}
+/* .tSlide h2{
+    position: relative;
+    left: 100px;
+}
+.fSlide h2{
+    position: relative;
+    left: 100px;
+}
+.sSlide h2{
+    position: relative;
+    left: 100px;
+}
+.tSlide span{
+    position: relative;
+    left: 100px;
+}
+.fSlide span{
+    position: relative;
+    left: 100px;
+}
+.sSlide span{
+    position: relative;
+    left: 100px;
+} */
+.Boxx{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin-left: 100px;
+    
+}

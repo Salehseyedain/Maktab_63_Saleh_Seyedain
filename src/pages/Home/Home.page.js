@@ -2,7 +2,7 @@ import  './Home.css'
 import React, {Component} from 'react';
 import * as api from "../../api/user.api";
 import {PRODUCTS} from "../../configs/url.config";
-
+import {Carousel} from '../../components/Carousel/Carousel'
 import Group from './components/Group/Group';
 
 
@@ -26,12 +26,12 @@ class Home extends Component {
     render() {
         return (
             <div>
+                <Carousel/>
                 {/*<HomeTable prop={this.state}/>*/}
                 {  this.state.data .map(item=>{
                     return <Group hOne={[item.name,item.id]} data={this.state.commoditis}/>
                     
                 })}
-
 
 
             </div>

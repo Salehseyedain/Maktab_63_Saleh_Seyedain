@@ -23,12 +23,10 @@ export default class Group extends Component {
 
                     {
                         this.props.data.map((item ,index)=>{
-
                         if(item.category.group==this.props.hOne[0] && num<6){
                             num+=1
                             console.log(item);
                             return <Card data={item}/>
-
                         }
                     
                     })}
