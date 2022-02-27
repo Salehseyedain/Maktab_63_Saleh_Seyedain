@@ -95,9 +95,9 @@ function Nahayi() {
                 
                 <Box dir='rtl' className={style.right} component="form" sx={{'& > :not(style)': { m: 1, width: '45ch' },}} Validate autoComplete="off">
 
-                    <TextField dir='rtl' fullWidth label="نام:" id="fullWidth" />
-                    <TextField dir='rtl' fullWidth label="ادرس:" id="fullWidth" />
-                    <TextField dir='rtl' fullWidth label="تاریخ تحویل:" id="fullWidth" />
+                    <TextField  fullWidth label="نام:" id="fullWidth" />
+                    <TextField  fullWidth label="ادرس:" id="fullWidth" />
+                    <TextField  fullWidth label="تاریخ تحویل:" id="fullWidth" />
 
                 </Box>
                 <Box dir='rtl' className={style.left}  component="form" sx={{'& > :not(style)': { m: 1, width: '45ch' },}} noValidate autoComplete="off">

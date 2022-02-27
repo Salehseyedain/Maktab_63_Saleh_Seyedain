@@ -4,35 +4,39 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
+
 export default function SelectAutoWidth(props) {
-    const [age, setAge] = React.useState('');
+    const [age, setAge] = React.useState(props.value);
 
     const handleChange = (event) => {
         setAge(event.target.value);
     };
-
+    
     return (
         <div>
             <label htmlFor={"selector"}>دسته بندي:</label>
-            <FormControl sx={{ m: 0, width:"100%",backgroundColor:"white", padding:"0 0",margin:"0.4rem 0"}} id={"selector"}>
+                <FormControl sx={{ m: 0, width:"100%",backgroundColor:"white", padding:"0 0",margin:"0.4rem 0"}} id={"selector"}>
 
-                <Select
-                    name={"group"}
-                    sx={{height:"2rem",width:"100%"}}
-                    value={age}
-                    onChange={handleChange}
-                    displayEmpty
-                    inputProps={{ 'aria-label': 'Without label' }}
+                    <Select
+                        name={"group"}
+                        sx={{height:"2rem",width:"100%"}}
+                        value={age}
+                        onChange={handleChange}
+                        displayEmpty
+                        inputProps={{ 'aria-label': 'Without label' }}
 
-                >
-                    <MenuItem value="">
-                        <em>{props.value}</em>
-                    </MenuItem>
-                    <MenuItem value={'اپل'}>اپل</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
-                </Select>
-            </FormControl>
+                    >
+                        {/* <MenuItem value="">
+                            <em>{props.value}</em>
+                        </MenuItem> */}
+            
+                        <MenuItem dir='rtl' value={'اپل'}>اپل</MenuItem>
+                        <MenuItem dir='rtl' value={'سامسونگ'}>سامسونگ</MenuItem>
+                        <MenuItem dir='rtl' value={'مک بوک'}>مک بوک</MenuItem>
+                        <MenuItem dir='rtl' value={'تبلت'}>تبلت</MenuItem>
+            
+                    </Select>
+                </FormControl>
         </div>
     );
 }

@@ -42,7 +42,7 @@ export default function EditModal(props) {
         const data = Object.fromEntries(form);
         console.log("mooodal",form)
     }
-
+    // console.log(props.data.category.detail);
 
     return (
         <div >
@@ -70,7 +70,7 @@ export default function EditModal(props) {
                                     <input id={"commoditiNam"} value={props.data.category.name} />
                                 </div>
                                 <SelectAutoWidth value={props.data.category.group}/>
-                                <MinHeightTextarea/>
+                                <MinHeightTextarea value={props.data.category.detail}/>
                                 <Button type={"submit"} variant="contained" color="success" size="small" style={{ height:"2rem" , width:"9rem" ,marginTop:"1rem",marginLeft:"-1.5rem",background:"#060638"}}>ذخيره</Button>
                             </form>
                         </div>

@@ -53,26 +53,28 @@ class CustomerHedar extends Component {
             },
         }));
         return (
-            <div className={style.headerContainer}>
-                <div className={style.leftHedear}>
-                    <div className={style.basket}>
-                        <Link to={PATHS.BASKET}> <ShoppingCartIcon sx={{ fontSize: 40 ,color: "#556b2f"}} /></Link>
+            
+                <div className={style.headerContainer}>
+                    <div className={style.leftHedear}>
+                        <div className={style.basket}>
+                            <Link to={PATHS.BASKET}> <ShoppingCartIcon sx={{ fontSize: 40 ,color: "#556b2f"}} /></Link>
 
-                    </div>
-                    {/* <span> <RiShoppingCart2Line size={50}/></span> */}
-                    <div className={style.admin}>
-                        <Link to={PATHS.LOGIN}> <SupervisorAccountIcon sx={{ fontSize: 44,color: "#556b2f" }} /></Link>
+                        </div>
+                        {/* <span> <RiShoppingCart2Line size={50}/></span> */}
+                        <div className={style.admin}>
+                            <Link to={PATHS.LOGIN}> <SupervisorAccountIcon sx={{ fontSize: 44,color: "#556b2f" }} /></Link>
 
+                        </div>
+                        {/* <span><GrUserManager/></span> */}
                     </div>
-                    {/* <span><GrUserManager/></span> */}
+                        <Link to={PATHS.HOME}>
+                        <div className={style.rightHedear}>
+                            <h1>فروشگاه تربچه</h1>
+                            <img className={style.logoPic} src={logo}/>
+                        </div>
+                        </Link>
                 </div>
-                    <Link to={PATHS.HOME}>
-                    <div className={style.rightHedear}>
-                        <h1>فروشگاه تربچه</h1>
-                        <img className={style.logoPic} src={logo}/>
-                     </div>
-                    </Link>
-            </div>
+            
         );
     }
 }

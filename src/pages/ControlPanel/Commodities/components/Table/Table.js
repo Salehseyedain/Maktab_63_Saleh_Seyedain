@@ -95,7 +95,7 @@ function Row(props) {
 
             <React.Fragment >
                 <TableRow sx={{ '& > *': { borderBottom: 'unset' } }} id={`commoditi${row.id}`}>
-                    <TableCell align="right">
+                    {/* <TableCell align="right">
                         <IconButton
                             aria-label="expand row"
                             size="small"
@@ -103,21 +103,21 @@ function Row(props) {
                         >
                             {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
                         </IconButton>
-                    </TableCell>
-                    <TableCell align="right" ><img src={`http://localhost:3002/files/${row.category.icon}`} style={{width:"70px",height:"70px"}}/></TableCell>
-                    <TableCell align="right" component="th" scope="row">
+                    </TableCell> */}
+                    <TableCell align="center" ><img src={`http://localhost:3002/files/${row.category.icon}`} style={{width:"70px",height:"70px"}}/></TableCell>
+                    <TableCell align="center" component="th" scope="row">
                         {row.category.name}
                     </TableCell>
 
-                    <TableCell align="right">{row.category.group}</TableCell>
-                    <TableCell align="left" sx={{display:"flex",flexDirection:"column",height:"5rem"}}>
+                    <TableCell align="center">{row.category.group}</TableCell>
+                    <TableCell align="left" sx={{display:"flex",flexDirection:"row",alignItems:"center",justifyContent:'center',height:"5rem"}}>
                         <DeleteBut data={row} func={del}/>
                         <EditModal data={row} />
 
                     </TableCell>
 
                 </TableRow>
-                <TableRow>
+                {/* <TableRow>
                     <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
                         <Collapse in={open} timeout="auto" unmountOnExit>
                             <Box sx={{ margin: 1 }}>
@@ -145,7 +145,7 @@ function Row(props) {
                             </Box>
                         </Collapse>
                     </TableCell>
-                </TableRow>
+                </TableRow> */}
             </React.Fragment>
 
 
@@ -200,10 +200,10 @@ export default function CollapsibleTable(props) {
             <Table aria-label="collapsible table">
                 <TableHead>
                     <TableRow>
-                        <TableCell />
-                        <TableCell align="right">تصوير</TableCell>
-                        <TableCell align="right">نام كالا</TableCell>
-                        <TableCell align="right">دسته بندي</TableCell>
+                        {/* <TableCell /> */}
+                        <TableCell align="center">تصوير</TableCell>
+                        <TableCell align="center">نام كالا</TableCell>
+                        <TableCell align="center">دسته بندي</TableCell>
                         <TableCell align="right" >  </TableCell>
                         {/*<TableCell align="right">Protein&nbsp;(g)</TableCell>*/}
                     </TableRow>
@@ -220,6 +220,7 @@ export default function CollapsibleTable(props) {
                     <TableRow>
                         <TablePagination
                             align={"center"}
+                            
                             rowsPerPageOptions={[2,5, 10, 25, { label: 'All', value: -1 }]}
                             colSpan={3}
                             count={rows.length}
@@ -227,7 +228,7 @@ export default function CollapsibleTable(props) {
                             page={page}
                             SelectProps={{
                                 inputProps: {
-                                    'aria-label': 'rows per page',
+                                    'aria-label': 'roowwwss',
                                 },
                                 native: true,
                             }}

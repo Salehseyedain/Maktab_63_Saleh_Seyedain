@@ -1,7 +1,8 @@
 import * as React from 'react';
 
 
-import {PATHS} from '../../configs/routes.config';
+import {PATHS} from "../../configs/routes.config";
+import {Link} from "react-router-dom";
 import {useRef} from 'react';
 import {Helmet} from 'react-helmet';
 
@@ -13,7 +14,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
+// import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
@@ -25,8 +26,20 @@ import style from '../../asset/styles/Login.page.module.css'
 import {useFormik} from "formik";
 import * as yup from 'yup';
 import {tableCellClasses} from "@mui/material/TableCell";
+import rtlPlugin from 'stylis-plugin-rtl';
+import { CacheProvider } from '@emotion/react';
+import createCache from '@emotion/cache';
+import { prefixer } from 'stylis';
 
 
+    const theme = createTheme({
+    direction: 'rtl', // Both here and <body dir="rtl">
+  });
+  // Create rtl cache
+  const cacheRtl = createCache({
+    key: 'muirtl',
+    stylisPlugins: [prefixer, rtlPlugin],
+  });
 
 
 
@@ -41,6 +54,8 @@ const validationSchema = yup.object({
         .min(4, 'رمزعبور باید بیشتر از 4 کارکتر باشد')
         .required('رمزعبور اجباری میباشد'),
 });
+
+
 
 const Login=() =>  {
     const formRef = useRef();
@@ -71,6 +86,8 @@ const Login=() =>  {
 
     return (
         <div className={style.login}>
+            <CacheProvider value={cacheRtl}>
+            <ThemeProvider theme={theme}>
             <Container component="main" maxWidth="xs"  className={style.container} dir="rtl" align="right"  >
                 <CssBaseline />
                 <Box
@@ -119,18 +136,23 @@ const Login=() =>  {
                         />
 
                         <Button
+                           
                             type="submit"
                             fullWidth
                             variant="contained"
-                            sx={{ mt: 3, mb: 2 }}
+                            sx={{ mt: 3, mb: 2 , backgroundColor:'darkgreen', fontWeight:'bolder'}}
                         >
                             ورود
                         </Button>
                     </Box>
-                    <Link top={PATHS.HOME}>بازگشت</Link>
+                    
+                    <Link style={{textDecoration:"none", backgroundColor:'purple', width:'100px', textAlign:'center', height:'40px', paddingTop:'6px', marginBottom:'6px', borderRadius:'6px', color:'white'}} to={PATHS.HOME}>بازگشت</Link>
+                    
                 </Box>
 
             </Container>
+            </ThemeProvider>
+            </CacheProvider>
         </div>
     );
 }

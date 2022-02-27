@@ -65,3 +65,14 @@
     width: 120px;
     height: 90px;
 }
+
+.footerContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    direction: rtl;
+    background-color: #cccaca;
+    padding: 0 10px;
+    color: #e0d9d3;
+}
+

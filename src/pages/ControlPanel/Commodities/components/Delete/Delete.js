@@ -42,7 +42,7 @@ export default function DeleteBut(props) {
     return (
         <div style={{direction:"rtl"}}>
 
-            <Button onClick={handleClickOpen} variant="contained" color="success" size="small" style={{ height:"1rem" , width:"2rem",background:"#cb5f07"}}>حذف</Button>
+            <Button onClick={handleClickOpen} variant="contained" color="success" size="small" style={{ height:"1rem" , width:"2rem",background:"#cb5f07", marginLeft:"10px"}}>حذف</Button>
             <Dialog
                 fullScreen={fullScreen}
                 open={open}

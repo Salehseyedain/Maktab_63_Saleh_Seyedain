@@ -4,7 +4,7 @@ import * as api from "../../api/user.api";
 import {PRODUCTS} from "../../configs/url.config";
 import {Carousel} from '../../components/Carousel/Carousel'
 import Group from './components/Group/Group';
-
+import style from '../../asset/styles/Home.module.css'
 
 class Home extends Component {
     state={
@@ -33,7 +33,17 @@ class Home extends Component {
                     
                 })}
 
-
+                {/* <div className={style.footerContainer}>
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <p>Trobche - Copyright © 2022 - All Rights Reserved - Made by Saleh Seyedain</p>
+                        <span>Logos</span>
+                    </div>
+                </div> */}
             </div>
         );
     }
